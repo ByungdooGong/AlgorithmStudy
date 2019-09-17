@@ -16,7 +16,7 @@ int solution(int bridge_length, int weight, vector<int> truck_weights) {
 		answer++;
 		hap -= bridge.front();
 		bridge.pop();
-		if (index < truck_weights.size() && hap + truck_weights[index] < weight) {
+		if (index < truck_weights.size() && hap + truck_weights[index] <= weight) {
 			hap += truck_weights[index];
 			bridge.push(truck_weights[index]);
 			if (index < truck_weights.size()) {
